@@ -1,12 +1,12 @@
-class ToDo {
+class ToDoModel {
   int? userId;
   int? id;
   String? title;
   bool? completed;
 
-  ToDo({this.userId, this.id, this.title, this.completed});
+  ToDoModel({this.userId, this.id, this.title, this.completed});
 
-  ToDo.fromJson(Map<String, dynamic> json) {
+  ToDoModel.fromJson(Map<String, dynamic> json) {
     userId = json['userId'];
     id = json['id'];
     title = json['title'];
@@ -14,7 +14,7 @@ class ToDo {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
+    final Map<String, dynamic> data = <String, dynamic>{};
     data['userId'] = this.userId;
     data['id'] = this.id;
     data['title'] = this.title;
